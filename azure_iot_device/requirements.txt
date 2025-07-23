@@ -1,0 +1,7 @@
+pip install azure-storage-blob
+pip install azure-eventhub
+pip install avro-python3
+azure-eventhub 5.2.0
+azure-storage-blob 12.6.0
+avro-python3 1.10.1
+pip install azure-storage-queue

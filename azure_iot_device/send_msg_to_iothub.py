@@ -6,14 +6,14 @@ from azure.iot.device import Message
 import time
 from datetime import datetime
 
-messages_to_send = 10
+messages_to_send = 5
 
 
 async def main():
+
     # The connection string for a device should never be stored in code. For the sake of simplicity we're using an environment variable here.
     
-    conn_str = 'HostName=IoTWarriorHub.azure-devices.net;DeviceId=MyIoTDeviceLappy;SharedAccessKey=M6DxXMzPDOYPKTQh6KUJDnYPaC1OVPVe4uvkvxAdGBU='
-
+    conn_str = 'H'
     # The client object is used to interact with your Azure IoT hub.
     device_client = IoTHubDeviceClient.create_from_connection_string(conn_str)
 
@@ -21,7 +21,7 @@ async def main():
     await device_client.connect()
 
     async def send_test_message(i):
-        value = "temperature: 30, Humidity: 23"
+        value = "temperature: 30, Humidity: 90"
 
         print("sending message #" + str(i))
         msg = Message(value)
@@ -36,7 +36,7 @@ async def main():
 
         await asyncio.gather(*[send_test_message(i)]) 
         time.sleep(1)
-        
+
     print(datetime.now())
 
     # Finally, shut down the client

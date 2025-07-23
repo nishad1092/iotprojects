@@ -1,0 +1,2 @@
+CONNECTION_STRING: "DefaultEndpointsProtocol=https;AccountName=iotstorage101;AccountKey=4yqOOmrhw7xFTyLYlwwZ+4+OS+Rb1NtMC7wbn+cAxJWG8ODCFcy3Nwfu9t7io/7xEWLWqJrFBrcHIx8ZBKQLLg==;EndpointSuffix=core.windows.net"
+QUEUE_NAME: "iotqueue-01"
